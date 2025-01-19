@@ -20,5 +20,5 @@ from orm_test import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('orm_test.urls')),
+    path('', include('orm_test.urls', namespace="main")),
 ]
