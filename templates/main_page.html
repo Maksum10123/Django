@@ -5,6 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>WELCOME, {{ name }}</h1>
+    <h1>WELCOME</h1>
+    <h3>Published posts:</h3>
+    {% for post in posts%}
+        <a href="posts/{{ post.id }}">
+        <h4>{{ post.title }} <small>{{ post.created_at }}</small></h4>
+        </a>
+    {% endfor %}
 </body>
 </html>
